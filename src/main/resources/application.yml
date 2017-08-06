@@ -1,0 +1,14 @@
+server:
+  display-name: mrr-java
+  context-path: /
+  port: 8080
+  session:
+    timeout: 30
+spring:
+  datasource:
+    hikari:
+      jdbc-url: ${JDBC_URL:jdbc:mysql://localhost:3306/mrr}
+      username: ${JDBC_USERNAME:root}
+      password: ${JDBC_PASSWORD:root}
+mybatis:
+  type-aliases-package: org.say.entity
