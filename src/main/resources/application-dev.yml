@@ -1,0 +1,19 @@
+server:
+  display-name: mrr-java
+  context-path: /
+  port: 8080
+  session:
+    timeout: 30
+spring:
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: ${JDBC_URL:jdbc:mysql://localhost:3306/mrr}
+      username: ${JDBC_USERNAME:root}
+      password: ${JDBC_PASSWORD:root}
+    hikari:
+      maxLifetime: 1765000
+      connection-timeout: 60000
+      maximum-pool-size: 5
+mybatis:
+  type-aliases-package: org.say.entity
+  mapperLocations: classpath:mapper/*.xml
